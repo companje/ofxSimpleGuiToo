@@ -115,20 +115,12 @@ public:
 		}
 	}
 
-	void onPress(int x, int y, int button) {
-		updateSlider();
-	}
-
-	void onDragOver(int x, int y, int button) {
-		updateSlider();
-	}
-
-	void onDragOutside(int x, int y, int button) {
-		updateSlider();
-	}
-
-
-
+  void onPress(int x, int y, int button) { lock = true; updateSlider(); }
+  void onDragOver(int x, int y, int button) { if (lock) updateSlider(); }
+  void onDragOutside(int x, int y, int button) { if (lock) updateSlider(); }
+  void onRelease(int x, int y, int button) { lock = false; }
+  void onReleaseOutside(int x, int y, int button) { lock = false; }
+  
 	void onKeyRight() {
 		increase();
 	}

@@ -207,7 +207,7 @@ void ofxSimpleGuiComboBox::setCBTextBGColor() {
 #define kSGCBTriangleWidth   10
 #define KSGCBTrianglePadding 5
 #define kSGCBTextPaddingX    3
-#define kSGCBTextPaddingY    15
+#define kSGCBTextPaddingY    12
 void ofxSimpleGuiComboBox::draw(float x, float y) {
 	//we assume a max of 256 characters.
 	char choiceBuf[256];

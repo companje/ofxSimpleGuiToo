@@ -30,7 +30,7 @@ void ofxSimpleGuiContent::draw(float x, float y) {
 	ofRect(0, 0, width, fixheight);
 	
 	ofSetHexColor(0xffffff);
-	content->draw(0, 0, width, fixheight);
+	glTranslatef(-x, -y, 0); content->draw(x, y, width, fixheight); glTranslatef(x, y, 0);
 	
 	ofFill();
 	setTextBGColor();
