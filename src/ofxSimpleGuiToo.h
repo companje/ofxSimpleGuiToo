@@ -51,7 +51,7 @@ public:
 	ofxSimpleGuiConfig			*config;	
 	
 	ofxSimpleGuiToo();
-	void						setup();
+	void						setup(string firstPageName);
 	
 	
 	void						loadFromXML();

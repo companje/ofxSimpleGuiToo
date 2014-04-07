@@ -9,7 +9,7 @@ ofxSimpleGuiToo::ofxSimpleGuiToo() {
 	doDefaultKeys = false;
 }
 
-void ofxSimpleGuiToo::setup() {
+void ofxSimpleGuiToo::setup(string firstPageName="") {
 	config			= &defaultSimpleGuiConfig;
 
 	doSave			= false;
@@ -24,7 +24,7 @@ void ofxSimpleGuiToo::setup() {
 	headerPage->addButton("Save Settings", doSave);
 	headerPage->addFPSCounter();
 
-	addPage();
+	addPage(firstPageName);
 	setAutoSave(true);
 	setAlignRight(false);
 	setDraw(false);
