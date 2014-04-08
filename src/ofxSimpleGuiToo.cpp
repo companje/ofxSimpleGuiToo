@@ -9,7 +9,7 @@ ofxSimpleGuiToo::ofxSimpleGuiToo() {
 	doDefaultKeys = false;
 }
 
-void ofxSimpleGuiToo::setup(string firstPageName="") {
+void ofxSimpleGuiToo::setup(string firstPageName) {
 	config			= &defaultSimpleGuiConfig;
 
 	doSave			= false;
